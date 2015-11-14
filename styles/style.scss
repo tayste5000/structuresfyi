@@ -35,6 +35,7 @@ a{
 
 .main{
 	@include container;
+	position: relative;
 }
 
 .header{
@@ -235,4 +236,42 @@ a{
   		}
   	}
   }
+}
+
+#dialogue{
+	@extend .clearfix;
+	position: absolute;
+	top:$navbar-height + 4em;
+	z-index: 500;
+	transform: translateZ(0);
+
+	margin: $gutter / 4;
+	padding: $gutter / 4;
+	border: 1px solid #999;
+	border-radius: $border-radius;
+	background-color: rgba(245,245,245,0.8);
+	>button{
+		background-color: #59f;
+		padding: $gutter / 4;
+		color: #fdfdfd;
+		border: 1px solid #999;
+		border-radius: $border-radius;
+		transition: background-color $animation-time;
+
+		&:hover, &:focus{
+			background-color:#6af;
+			cursor: pointer;
+		}
+	}
+	#prev{
+		float:left;
+	}
+	#next{
+		float:right;
+	}
+
+	@include small{
+		width: 50%;
+		margin-left: 25%;
+	}
 }

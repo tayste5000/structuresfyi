@@ -1,0 +1,21 @@
+{% extends 'layout.twig.html' %}
+
+{% block title %}{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block main %}
+
+<div id="dialogue">
+  <h2>Explore molecular life.</h2>
+  <p>Life as we know it is the consequence of millions of molecules interacting with each other.
+    Follow along with this presentation to see how these interactions work.
+  </p>
+</div>
+
+<div id="viewer" style="height:500px;"></div>
+
+<script src="/public/js/bio-pv.min.js" ></script>
+<script src="/public/js/structures.js" ></script>
+
+{% endblock %}

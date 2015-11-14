@@ -58,6 +58,17 @@ function about(){
 
 }
 
+function proteins(){
+
+	global $twig;
+
+	echo $twig->render('intro/proteins.twig.html', array(
+		'base' => getenv('BASE_URL'),
+		'active' => 'intro'
+	));
+
+}
+
 function map(){
 
 	global $twig;

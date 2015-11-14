@@ -11,6 +11,7 @@ require_once 'handlers.php';
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/', 'home');
     $r->addRoute('GET', '/intro/', 'intro');
+    $r->addRoute('GET', '/intro/protein/', 'proteins');
     $r->addRoute('GET', '/about/', 'about');
     $r->addRoute('GET', '/structures/', 'structures');
     $r->addRoute('GET', '/site-map/', 'map');
