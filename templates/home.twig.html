@@ -1,0 +1,52 @@
+{% extends 'layout.twig.html' %}
+
+{% block title %}{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block main %}
+
+<div style="width:100%;text-align:center;position:relative;" id="structure-view">
+
+	<img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Argonne's_Midwest_Center_for_Structural_Genomics_deposits_1,000th_protein_structure.jpg" alt="" style="width:100%;">
+
+	<div class="info-div">
+		<p class="message"><b>Protein of the month:</b><br>
+		{protein name} (PDB ID: XXXX)<br><br>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat.<br>
+		<a href="#">Take a tour of {protein name}.</a>
+		</p>
+		<button id="expand"><i class="fa fa-2x fa-question-circle"></i><i class="fa fa-2x fa-times-circle"></i></button>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+	window.addEventListener("load",loadWindow);
+
+	function loadWindow(){
+
+		var expand = document.querySelector("#expand");
+		var infoDiv = document.querySelector(".info-div");
+		var structureView = document.querySelector("#structure-view");
+		console.log(infoDiv)
+
+		expand.addEventListener("click", function(){
+			infoDiv.classList.toggle("open");
+		});
+
+	}
+
+	function wait(time){
+		return new Promise(function(resolve,reject){
+			window.setTimeout(function(){
+				resolve()
+			},time);
+		});
+	}
+</script>	
+
+{% endblock %}
