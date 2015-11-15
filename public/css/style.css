@@ -153,9 +153,6 @@ a {
       line-height: 1.2;
       -webkit-transition: color 0.3s;
       transition: color 0.3s; }
-      .navbar__title > a:hover, .navbar__title > a:focus {
-        color: #fdfdfd;
-        background-color: #1d1d1d; }
   .navbar__button {
     width: 4em;
     padding: 0.875em 1em;
@@ -212,8 +209,7 @@ a {
 .main {
   max-width: 1000px;
   padding: 0 1em;
-  margin: 0 auto;
-  position: relative; }
+  margin: 0 auto; }
 
 .body {
   max-width: 1000px;
@@ -328,12 +324,11 @@ a {
         color: #fdfdfd; }
 
 .info-div {
-  text-align: right;
+  text-align: left;
   display: inline-block;
   position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 1em; }
+  top: 0;
+  left: 0; }
   .info-div > button {
     cursor: pointer;
     opacity: 1.0;
@@ -348,7 +343,6 @@ a {
       -webkit-transition: color 0.3s;
       transition: color 0.3s; }
   .info-div > .message {
-    text-align: left;
     opacity: 0.0;
     padding: 10px;
     border-radius: 25px;
@@ -366,7 +360,6 @@ a {
 
 #dialogue {
   position: absolute;
-  top: 7em;
   z-index: 500;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);

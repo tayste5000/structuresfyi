@@ -47,11 +47,6 @@
 		padding: ((($navbar-height - $navbar-title-size * $heading-line-height) / 2) / $navbar-title-size) * 1em $gutter / 2;
 		line-height: $heading-line-height;
 		transition: color $animation-time;
-
-		&:hover, &:focus{
-			color: $navbar-color-active;
-			background-color: $navbar-background-color-active;
-		}
 	}
 }
 

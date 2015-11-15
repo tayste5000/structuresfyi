@@ -35,7 +35,6 @@ a{
 
 .main{
 	@include container;
-	position: relative;
 }
 
 .header{
@@ -184,12 +183,11 @@ a{
 }
 
 .info-div{
-	text-align: right;
+	text-align: left;
 	display: inline-block;
   position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: $gutter / 2;
+  top: 0;
+  left: 0;
   
   &>button{
   	cursor: pointer;
@@ -210,7 +208,6 @@ a{
   }
 
   &>.message{
-  	text-align: left;
   	opacity: 0.0;
   	padding: 10px;
 	  border-radius: 25px;
@@ -241,7 +238,6 @@ a{
 #dialogue{
 	@extend .clearfix;
 	position: absolute;
-	top:$navbar-height + 4em;
 	z-index: 500;
 	transform: translateZ(0);
 
