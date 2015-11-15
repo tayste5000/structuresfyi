@@ -387,3 +387,8 @@ a {
     #dialogue {
       width: 50%;
       margin-left: 25%; } }
+
+.protein-view {
+  position: relative;
+  margin-left: -1em;
+  margin-right: -1em; }
