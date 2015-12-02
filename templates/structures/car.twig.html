@@ -1,0 +1,23 @@
+{% extends 'layout.twig.html' %}
+
+{% block title %}{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block main %}
+
+<div class="protein-view">
+	<div id="dialogue">
+	  <h2>Constitutive androstane receptor (CAR)</h2>
+	  <p>Take a tour of the ligand binding domain of CAR to learn about its role in xenobiotic regulation.
+	  </p>
+	</div>
+	
+	<div id="viewer" style="height:500px;"></div>
+
+</div>
+
+<script src="/public/js/bio-pv.min.js" ></script>
+<script src="/public/js/car.js" ></script>
+
+{% endblock %}

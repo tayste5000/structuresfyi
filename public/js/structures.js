@@ -326,7 +326,7 @@ return {
 
     },
     "tamoxifen": function estrogenStart(){
-      dialogue.innerHTML = "<p>Tamoxifin is a common treatment for hormone related breast cancer. It works by binding to the estrogen binding pocket and forcing the receptor into an inactive shape.</p>" +
+      dialogue.innerHTML = "<p>Tamoxifen is a common treatment for hormone related breast cancer. It works by binding to the estrogen binding pocket and forcing the receptor into an inactive shape.</p>" +
       "<button type=\"button\" id=\"prev\">Previous</button>" + 
       "<button type=\"button\" id=\"next\">Next</button>";
 
@@ -358,9 +358,9 @@ return {
   },
   "end": function end(){
     dialogue.innerHTML = "<p>I hope that you have enjoyed this interactive presentation on structural biology. " + 
-    "<a href=\"/projects/structures/info\">For more resources on learning about structural biology, click here.</a><br>" + 
+    "<a href=\"/resources/\">For more resources on learning about structural biology, click here.</a><br>" + 
     "<p>If you are a structural biologist and would like to collaborate on an interactive presentation to help others learn about " +
-    "your research and why it is important to society <a href=\"/contact\">please get in touch with me.</a></p>" +
+    "your research and why it is important to society <a href=\"/about/#contact\">please get in touch with me.</a></p>" +
     "<button type=\"button\" id=\"restart\">Restart</button>";
 
     var restart = document.querySelector("#restart");

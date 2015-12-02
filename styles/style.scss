@@ -209,12 +209,14 @@ a{
 
   &>.message{
   	opacity: 0.0;
-  	padding: 10px;
-	  border-radius: 25px;
-	  transition: width $animation-time, height $animation-time, opacity $animation-time;
-	  color: #8cf;
-	  border: 1px solid #8cf;
-	  background: rgba(30,30,30,0.8);
+  	@extend .panel;
+		
+		&>a{
+			@extend .panel-button;
+			display: inline-block;
+			text-decoration: none;
+		}
+
   }
 
   &.open{
@@ -226,6 +228,7 @@ a{
   	&>button{
 			&>.fa-times-circle{
 				display: inline;
+				color: #f55;
 			}
 
   		&>.fa-question-circle{
@@ -235,32 +238,44 @@ a{
   }
 }
 
-#dialogue{
-	@extend .clearfix;
-	position: absolute;
-	z-index: 500;
-	transform: translateZ(0);
+.panel-button{
+	background-color: #59f;
+	padding: $gutter / 4;
+	color: #fdfdfd;
+	border: 1px solid #333;
+	border-radius: $border-radius;
+	transition: background-color $animation-time;
+	margin-bottom:$gutter / 4;
+	&:last-child{
+		margin-bottom:0;
+	}
 
+	&:hover, &:focus{
+		background-color:#6af;
+		cursor: pointer;
+	}
+}
+
+.panel{
 	margin: $gutter / 4;
 	padding: $gutter / 4;
-	border: 1px solid #999;
+	border: 1px solid #333;
 	border-radius: $border-radius;
 	background-color: rgba(245,245,245,0.8);
 	>button{
-		background-color: #59f;
-		padding: $gutter / 4;
-		color: #fdfdfd;
-		border: 1px solid #999;
-		border-radius: $border-radius;
-		transition: background-color $animation-time;
-
-		&:hover, &:focus{
-			background-color:#6af;
-			cursor: pointer;
-		}
+		@extend .panel-button;
 	}
+}
+
+#dialogue{
+	@extend .clearfix;
+	@extend .panel;
+	position: absolute;
+	z-index: 500;
+	transform: translateZ(0);
 	#prev{
 		float:left;
+		margin-bottom:0;
 	}
 	#next{
 		float:right;
@@ -280,4 +295,13 @@ a{
 
 .intro-img{
 	width: 100%;
+}
+
+.fancy-button{
+	@extend .panel-button;
+	text-decoration: none;
+	display: inline-block;
+	&:visited{
+		color: #fdfdfd;
+	}
 }

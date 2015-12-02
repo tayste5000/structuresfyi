@@ -343,44 +343,48 @@ a {
       -webkit-transition: color 0.3s;
       transition: color 0.3s; }
   .info-div > .message {
-    opacity: 0.0;
-    padding: 10px;
-    border-radius: 25px;
-    -webkit-transition: width 0.3s, height 0.3s, opacity 0.3s;
-    transition: width 0.3s, height 0.3s, opacity 0.3s;
-    color: #8cf;
-    border: 1px solid #8cf;
-    background: rgba(30, 30, 30, 0.8); }
+    opacity: 0.0; }
+    .info-div > .message > a {
+      display: inline-block;
+      text-decoration: none; }
   .info-div.open > .message {
     opacity: 1.0; }
   .info-div.open > button > .fa-times-circle {
-    display: inline; }
+    display: inline;
+    color: #f55; }
   .info-div.open > button > .fa-question-circle {
     display: none; }
+
+.panel-button, .info-div > .message > a, .panel > button, .info-div > .message > button, #dialogue > button, .fancy-button {
+  background-color: #59f;
+  padding: 0.5em;
+  color: #fdfdfd;
+  border: 1px solid #333;
+  border-radius: 3px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  margin-bottom: 0.5em; }
+  .panel-button:last-child, .info-div > .message > a:last-child, .panel > button:last-child, .info-div > .message > button:last-child, #dialogue > button:last-child, .fancy-button:last-child {
+    margin-bottom: 0; }
+  .panel-button:hover, .info-div > .message > a:hover, .panel > button:hover, .info-div > .message > button:hover, #dialogue > button:hover, .fancy-button:hover, .panel-button:focus, .info-div > .message > a:focus, .panel > button:focus, .info-div > .message > button:focus, #dialogue > button:focus, .fancy-button:focus {
+    background-color: #6af;
+    cursor: pointer; }
+
+.panel, .info-div > .message, #dialogue {
+  margin: 0.5em;
+  padding: 0.5em;
+  border: 1px solid #333;
+  border-radius: 3px;
+  background-color: rgba(245, 245, 245, 0.8); }
 
 #dialogue {
   position: absolute;
   z-index: 500;
   -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-  margin: 0.5em;
-  padding: 0.5em;
-  border: 1px solid #999;
-  border-radius: 3px;
-  background-color: rgba(245, 245, 245, 0.8); }
-  #dialogue > button {
-    background-color: #59f;
-    padding: 0.5em;
-    color: #fdfdfd;
-    border: 1px solid #999;
-    border-radius: 3px;
-    -webkit-transition: background-color 0.3s;
-    transition: background-color 0.3s; }
-    #dialogue > button:hover, #dialogue > button:focus {
-      background-color: #6af;
-      cursor: pointer; }
+          transform: translateZ(0); }
   #dialogue #prev {
-    float: left; }
+    float: left;
+    margin-bottom: 0; }
   #dialogue #next {
     float: right; }
   @media (min-width: 768px) {
@@ -395,3 +399,9 @@ a {
 
 .intro-img {
   width: 100%; }
+
+.fancy-button {
+  text-decoration: none;
+  display: inline-block; }
+  .fancy-button:visited {
+    color: #fdfdfd; }

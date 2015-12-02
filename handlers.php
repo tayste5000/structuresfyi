@@ -47,6 +47,27 @@ function structures(){
 
 }
 
+function resources(){
+
+	global $twig;
+
+	echo $twig->render('resources.twig.html', array(
+		'base' => getenv('BASE_URL')
+	));
+
+}
+
+function car(){
+
+	global $twig;
+
+	echo $twig->render('structures/car.twig.html', array(
+		'base' => getenv('BASE_URL'),
+		'active' => 'structures'
+	));
+
+}
+
 function about(){
 
 	global $twig;
