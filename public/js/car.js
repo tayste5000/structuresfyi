@@ -67,7 +67,8 @@ return {
 
     dialogue.innerHTML = "<p>Explore the features of CAR</p>" +
     "<button type=\"button\" id=\"ligand\">Ligand Binding Pocket</button><br>" +
-    "<button type=\"button\" id=\"helix\">Helix 12</button>"; 
+    "<button type=\"button\" id=\"helix\">Helix 12</button><br>" +
+    "<button type=\"button\" id=\"about\">About CAR</button>"; 
 
 
     viewer.setZoom(100,300);
@@ -86,6 +87,23 @@ return {
     helix.addEventListener("click", function(){
       presentation.helix12.start();
     });
+
+    about = document.querySelector("#about");
+
+    about.addEventListener("click", function(){
+      presentation.about();
+    });
+  },
+  "about": function about(){
+    dialogue.innerHTML = "<button id=\"menu\"><i class=\"fa fa-arrow-circle-left\"></i>&nbsp;To menu</button>" +
+      "<p>CAR is a nuclear hormone receptor present in the liver. CAR is part of the liver's xenobiotic regulation mechanism. Xenobiotic regulation involves detecting foreign molecules and either destroying them or removing them from the cells. This mechanism is abused in drug resistant cancer to reduce the effectiveness of chemotheraputics.</p>"; 
+
+    menu = document.querySelector("#menu");
+
+    menu.addEventListener("click", function(){
+      presentation.start();
+    });
+
   },
   "ligandBinding": {
     "start": function start(){
@@ -290,7 +308,7 @@ return {
       "<button type=\"button\" id=\"prev\">Previous</button>" +
       "<button type=\"button\" id=\"next\">Next</button>";
 
-      viewer.setZoom(50,300);
+      viewer.setZoom(80,300);
       viewer.centerOn(structures["car"].select({chain: "D", rnumRange: [340,348]}));
       viewer.setRotation([0.9705421328544617, 0.23866713047027588, 0.032934244722127914, 0, -0.13699118793010712, 0.6591164469718933, -0.7394567131996155, 0, -0.19819200038909912, 0.7131625413894653, 0.6723951101303101, 0, 0, 0, 0, 1], 300);
       viewer.hide("*");
@@ -320,13 +338,13 @@ return {
 
       dialogue.innerHTML = "<button id=\"menu\"><i class=\"fa fa-arrow-circle-left\"></i>&nbsp;To menu</button>" +
       "<p>The shape of <span class=\"highlight\" style=\"color:lime\">helix 12</span> is controlled by ligand binding. " +
-      "CAR will be active when either an <span>agonistic</span> molecule, or no molecule, is bound. " +
-      "CAR will be inactive when an <span>inverse agonistic</span> molecule is bound.</p>" +
+      "CAR will be active when either an <span style=\"color:#f33\">agonistic</span> molecule, or no molecule, is bound. " +
+      "CAR will be inactive when an <span style=\"color:#33f\">inverse agonistic</span> molecule is bound.</p>" +
       "<button type=\"button\" id=\"prev\">Previous</button>";
 
       var active = 1;
 
-      viewer.setZoom(50,300);
+      viewer.setZoom(80,300);
       viewer.centerOn(structures["car"].select({chain: "D", rnumRange: [340,348]}));
       viewer.setRotation([0.9705421328544617, 0.23866713047027588, 0.032934244722127914, 0, -0.13699118793010712, 0.6591164469718933, -0.7394567131996155, 0, -0.19819200038909912, 0.7131625413894653, 0.6723951101303101, 0, 0, 0, 0, 1], 300);
       viewer.hide("*");
