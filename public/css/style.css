@@ -331,7 +331,6 @@ a {
   left: 0; }
   .info-div > button {
     cursor: pointer;
-    opacity: 1.0;
     -webkit-transition: color 0.3s;
     transition: color 0.3s;
     color: #59c; }
@@ -360,7 +359,7 @@ a {
     .info-div.open > button > .fa-question-circle {
       display: none; }
 
-.panel-button, .info-div > .message > a, .panel > button, .info-div > .message > button, #dialogue > button, .fancy-button {
+.panel-button, .info-div > .message > a, .panel > button:not(#menu), .info-div > .message > button:not(#menu), #dialogue > button:not(#menu), .fancy-button, .collapse-btn {
   background-color: #59f;
   padding: 0.5em;
   color: #fdfdfd;
@@ -369,9 +368,9 @@ a {
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
   margin-bottom: 0.5em; }
-  .panel-button:last-child, .info-div > .message > a:last-child, .panel > button:last-child, .info-div > .message > button:last-child, #dialogue > button:last-child, .fancy-button:last-child {
+  .panel-button:last-child, .info-div > .message > a:last-child, .panel > button:last-child:not(#menu), .info-div > .message > button:last-child:not(#menu), #dialogue > button:last-child:not(#menu), .fancy-button:last-child, .collapse-btn:last-child {
     margin-bottom: 0; }
-  .panel-button:hover, .info-div > .message > a:hover, .panel > button:hover, .info-div > .message > button:hover, #dialogue > button:hover, .fancy-button:hover, .panel-button:focus, .info-div > .message > a:focus, .panel > button:focus, .info-div > .message > button:focus, #dialogue > button:focus, .fancy-button:focus {
+  .panel-button:hover, .info-div > .message > a:hover, .panel > button:hover:not(#menu), .info-div > .message > button:hover:not(#menu), #dialogue > button:hover:not(#menu), .fancy-button:hover, .collapse-btn:hover, .panel-button:focus, .info-div > .message > a:focus, .panel > button:focus:not(#menu), .info-div > .message > button:focus:not(#menu), #dialogue > button:focus:not(#menu), .fancy-button:focus, .collapse-btn:focus {
     background-color: #6af;
     cursor: pointer; }
 
@@ -386,10 +385,21 @@ a {
   position: absolute;
   z-index: 500;
   -webkit-transform: translateZ(0);
-          transform: translateZ(0); }
-  #dialogue #prev {
-    float: left;
+          transform: translateZ(0);
+  opacity: 1.0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
+  #dialogue #menu {
+    color: #37f;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s; }
+    #dialogue #menu:hover, #dialogue #menu:focus {
+      color: #15f;
+      cursor: pointer; }
+  #dialogue > button#prev, #dialogue > button#next {
     margin-bottom: 0; }
+  #dialogue #prev {
+    float: left; }
   #dialogue #next {
     float: right; }
   @media (min-width: 768px) {
@@ -400,7 +410,12 @@ a {
 .protein-view {
   position: relative;
   margin-left: -1em;
-  margin-right: -1em; }
+  margin-right: -1em;
+  margin-top: -5px; }
+  @media (min-width: 768px) {
+    .protein-view {
+      margin-left: 0em;
+      margin-right: 0em; } }
 
 .intro-img {
   width: 100%; }
@@ -422,3 +437,30 @@ a {
   background-color: #e33;
   color: #fdfdfd;
   font-weight: 700; }
+
+.highlight {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0 2px;
+  border-radius: 3px; }
+
+.collapse-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 5px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
+  .collapse-btn > .expand-txt {
+    display: none; }
+
+.collapse #dialogue {
+  display: none; }
+
+.collapse .collapse-btn > .collapse-txt {
+  display: none; }
+
+.collapse .collapse-btn > .expand-txt {
+  display: inline; }
+
+.transitioning #dialogue {
+  opacity: 0.0; }

@@ -191,10 +191,9 @@ a{
   
   &>button{
   	cursor: pointer;
-  	opacity: 1.0;
   	transition: color $animation-time;
   	color: #59c;
-  	
+
   	&:hover, &:focus{
   		color: #49e;
   	}
@@ -269,7 +268,7 @@ a{
 	border: 1px solid #333;
 	border-radius: $border-radius;
 	background-color: rgba(245,245,245,0.8);
-	>button{
+	&>button:not(#menu){
 		@extend .panel-button;
 	}
 }
@@ -280,9 +279,22 @@ a{
 	position: absolute;
 	z-index: 500;
 	transform: translateZ(0);
+	opacity: 1.0;
+	transition: opacity $animation-time;
+
+	#menu{
+		color: #37f;
+		transition: color $animation-time;
+		&:hover, &:focus{
+			color: #15f;
+			cursor: pointer;
+		}
+	}
+	&>button#prev, &>button#next{
+		margin-bottom: 0;
+	}
 	#prev{
 		float:left;
-		margin-bottom:0;
 	}
 	#next{
 		float:right;
@@ -298,6 +310,11 @@ a{
 	position:relative;
 	margin-left:-1em;
 	margin-right:-1em;
+	margin-top:-5px;
+	@include small{
+		margin-left:0em;
+		margin-right:0em;
+	}
 }
 
 .intro-img{
@@ -325,4 +342,42 @@ a{
   background-color: #e33;
   color: #fdfdfd;
   font-weight: 700;
+}
+
+.highlight{
+	background: rgba(0,0,0,0.4);
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.collapse-btn{
+	@extend .panel-button;
+	position:absolute;
+	right:0;
+	top:0;
+	margin:5px;
+	transition: opacity $animation-time;
+	&>.expand-txt{
+		display: none;
+	}
+}
+
+.collapse{
+	#dialogue{
+		display: none;
+	}
+	.collapse-btn{
+		&>.collapse-txt{
+			display: none;
+		}
+		&>.expand-txt{
+			display: inline;
+		}
+	}
+}
+
+.transitioning{
+	#dialogue{
+		opacity: 0.0;
+	}
 }

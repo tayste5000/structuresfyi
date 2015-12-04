@@ -90,7 +90,7 @@ return {
   "ligandBinding": {
     "start": function start(){
 
-      dialogue.innerHTML = "<button id=\"menu\">To menu</button>" +
+      dialogue.innerHTML = "<button id=\"menu\"><i class=\"fa fa-arrow-circle-left\"></i>&nbsp;To menu</button>" +
       "<p>This is the ligand binding pocket of CAR</p>" +
       "<button type=\"button\" id=\"next\">Next</button>"; 
 
@@ -115,8 +115,8 @@ return {
     },
     "residues": function residues(){
 
-      dialogue.innerHTML = "<button id=\"menu\">To menu</button>" +
-      "<p>This pocket is lined with <span style =\"color:#ffa200\">hydrophobic</span> amino acids.</p>" +
+      dialogue.innerHTML = "<button id=\"menu\"><i class=\"fa fa-arrow-circle-left\"></i>&nbsp;To menu</button>" +
+      "<p>This pocket is lined with <span class=\"highlight\" style =\"color:#fb1\">hydrophobic</span> amino acids.</p>" +
       "<button type=\"button\" id=\"prev\">Previous</button>" +
       "<button type=\"button\" id=\"next\">Next</button>";
 
@@ -169,9 +169,9 @@ return {
 
     },   
     "ligand": function ligand(){
-       dialogue.innerHTML = "<button id=\"menu\">To menu</button>" +
+       dialogue.innerHTML = "<button id=\"menu\"><i class=\"fa fa-arrow-circle-left\"></i>&nbsp;To menu</button>" +
       "<p>The chemistry of the ligand binding pocket attracts molecules " +
-      "such as <span style=\"color:#ffcc73\">5&beta;-pregnane-3,20-dione</span>, " +
+      "such as <span class=\"highlight\" style=\"color:#ffcc73\">5&beta;-pregnane-3,20-dione</span>, " +
       "which increases gene activation by CAR</p>" +
       "<button type=\"button\" id=\"prev\">Previous</button>";
 
@@ -221,8 +221,8 @@ return {
   "helix12": {
     "start": function start(){
 
-      dialogue.innerHTML = "<button id=\"menu\">To menu</button>" +
-      "<p>The shape of <span style=\"color:lime\">helix 12</span> determines whether " +
+      dialogue.innerHTML = "<button id=\"menu\"><i class=\"fa fa-arrow-circle-left\"></i>&nbsp;To menu</button>" +
+      "<p>The shape of <span class=\"highlight\" style=\"color:lime\">helix 12</span> determines whether " +
       "CAR will activate or deactivate genes</p>" +
       "<button type=\"button\" id=\"next\">Next</button>"; 
 
@@ -248,8 +248,8 @@ return {
     },
     "active": function active(){
 
-      dialogue.innerHTML = "<button id=\"menu\">To menu</button>" +
-      "<p>In the active state, <span style=\"color:lime\">helix 12</span> will is recognized by proteins such as " +
+      dialogue.innerHTML = "<button id=\"menu\"><i class=\"fa fa-arrow-circle-left\"></i>&nbsp;To menu</button>" +
+      "<p>In the active state, <span class=\"highlight\" style=\"color:lime\">helix 12</span> will is recognized by proteins such as " +
       "<span style=\"color:#e00\">SRC</span> that help to initiate gene activation.</p>" +
       "<button type=\"button\" id=\"prev\">Previous</button>" +
       "<button type=\"button\" id=\"next\">Next</button>";
@@ -284,8 +284,8 @@ return {
 
     "inactive": function inactive(){
       
-      dialogue.innerHTML = "<button id=\"menu\">To menu</button>" +
-      "<p>In the inactive state, <span style=\"color:lime\">helix 12</span> will is recognized by proteins such as " +
+      dialogue.innerHTML = "<button id=\"menu\"><i class=\"fa fa-arrow-circle-left\"></i>&nbsp;To menu</button>" +
+      "<p>In the inactive state, <span class=\"highlight\" style=\"color:lime\">helix 12</span> will is recognized by proteins such as " +
       "SMRT (not shown) that prevent gene activation.</p>" +
       "<button type=\"button\" id=\"prev\">Previous</button>" +
       "<button type=\"button\" id=\"next\">Next</button>";
@@ -318,8 +318,8 @@ return {
 
     "ligand": function ligand(){
 
-      dialogue.innerHTML = "<button id=\"menu\">To menu</button>" +
-      "<p>The shape of <span style=\"color:lime\">helix 12</span> is controlled by ligand binding. " +
+      dialogue.innerHTML = "<button id=\"menu\"><i class=\"fa fa-arrow-circle-left\"></i>&nbsp;To menu</button>" +
+      "<p>The shape of <span class=\"highlight\" style=\"color:lime\">helix 12</span> is controlled by ligand binding. " +
       "CAR will be active when either an <span>agonistic</span> molecule, or no molecule, is bound. " +
       "CAR will be inactive when an <span>inverse agonistic</span> molecule is bound.</p>" +
       "<button type=\"button\" id=\"prev\">Previous</button>";
