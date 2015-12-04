@@ -357,6 +357,8 @@ a{
 	top:0;
 	margin:5px;
 	transition: opacity $animation-time;
+	z-index: 500;
+	transform: translateZ(0);
 	&>.expand-txt{
 		display: none;
 	}

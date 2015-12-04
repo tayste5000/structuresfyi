@@ -449,7 +449,10 @@ a {
   top: 0;
   margin: 5px;
   -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s; }
+  transition: opacity 0.3s;
+  z-index: 500;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0); }
   .collapse-btn > .expand-txt {
     display: none; }
 
