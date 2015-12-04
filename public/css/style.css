@@ -332,10 +332,10 @@ a {
   .info-div > button {
     cursor: pointer;
     opacity: 1.0;
-    -webkit-transition: opacity 0.3s;
-    transition: opacity 0.3s;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
     color: #59c; }
-    .info-div > button:hover {
+    .info-div > button:hover, .info-div > button:focus {
       color: #49e; }
     .info-div > button > .fa-times-circle {
       display: none; }
@@ -343,17 +343,22 @@ a {
       -webkit-transition: color 0.3s;
       transition: color 0.3s; }
   .info-div > .message {
-    opacity: 0.0; }
+    opacity: 0.0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s; }
     .info-div > .message > a {
       display: inline-block;
       text-decoration: none; }
   .info-div.open > .message {
     opacity: 1.0; }
-  .info-div.open > button > .fa-times-circle {
-    display: inline;
+  .info-div.open > button {
     color: #f55; }
-  .info-div.open > button > .fa-question-circle {
-    display: none; }
+    .info-div.open > button:hover, .info-div.open > button:focus {
+      color: #f33; }
+    .info-div.open > button > .fa-times-circle {
+      display: inline; }
+    .info-div.open > button > .fa-question-circle {
+      display: none; }
 
 .panel-button, .info-div > .message > a, .panel > button, .info-div > .message > button, #dialogue > button, .fancy-button {
   background-color: #59f;
@@ -405,3 +410,15 @@ a {
   display: inline-block; }
   .fancy-button:visited {
     color: #fdfdfd; }
+
+.webgl-message {
+  display: none; }
+
+.no-webgl .webgl-message {
+  width: 100%;
+  display: block;
+  padding: 5px;
+  text-align: center;
+  background-color: #e33;
+  color: #fdfdfd;
+  font-weight: 700; }

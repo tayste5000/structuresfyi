@@ -192,9 +192,10 @@ a{
   &>button{
   	cursor: pointer;
   	opacity: 1.0;
-  	transition: opacity $animation-time;
+  	transition: color $animation-time;
   	color: #59c;
-  	&:hover{
+  	
+  	&:hover, &:focus{
   		color: #49e;
   	}
 
@@ -209,6 +210,7 @@ a{
 
   &>.message{
   	opacity: 0.0;
+  	transition: opacity $animation-time;
   	@extend .panel;
 		
 		&>a{
@@ -226,9 +228,14 @@ a{
   	}
 
   	&>button{
+  		color: #f55;
+
+  		&:hover, &:focus{
+				color: #f33;
+  		}
+
 			&>.fa-times-circle{
 				display: inline;
-				color: #f55;
 			}
 
   		&>.fa-question-circle{
@@ -304,4 +311,18 @@ a{
 	&:visited{
 		color: #fdfdfd;
 	}
+}
+
+.webgl-message{
+	display:none;
+}
+
+.no-webgl .webgl-message{
+	width: 100%;
+  display: block;
+  padding: 5px;
+  text-align: center;
+  background-color: #e33;
+  color: #fdfdfd;
+  font-weight: 700;
 }

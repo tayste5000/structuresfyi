@@ -19,16 +19,21 @@ dialogue = document.querySelector("#dialogue");
 
 viewer.on("viewerReady", function(){
 
-  dialogue.innerHTML += "<button type=\"button\" id=\"start\">Start</button>";
-
-  var startBtn = document.querySelector("#start");
-
   presentation = makePresentation(dialogue);
 
-  startBtn.addEventListener("click", function(){
-    presentation.start();
+  presentation.init().then(function(){
+    document.querySelector("#spinner").remove();
+
+    dialogue.innerHTML += "<button type=\"button\" id=\"start\">Start</button>";
+
+    var startBtn = document.querySelector("#start");
+
+    startBtn.addEventListener("click", function(){
+      presentation.start();
+    });
   });
-})
+
+});
 
 }
 
@@ -39,9 +44,17 @@ var reverse = false;
 var amino_acids = ["A", "C", "D", "E", "F", "G", "H", "I", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "Y"];
 var structures = {};
 
+var pdbPromises = []
+
 /*init*/
 loadStructure = function loadStructure(filename,structureName){
-  pv.io.fetchPdb("/public/pdbs/" + filename, function(output){structures[structureName] = output;});
+  var pdbPromise = new Promise(function(resolve,reject){
+    pv.io.fetchPdb("/public/pdbs/" + filename, function(output){
+      structures[structureName] = output;
+      resolve();
+    });
+  });
+  pdbPromises.push( pdbPromise );
 }
 
 amino_acids.forEach(function(value,index){
@@ -57,6 +70,9 @@ loadStructure("ss/estrogen-4HT.pdb", "tamoxifen");
 
 /*return presentation object*/
 return {
+  "init": function init(){
+    return Promise.all(pdbPromises);
+  },
   "start": function start(){
 
     dialogue.innerHTML = "<p>Proteins perform many functions in our cells. " +

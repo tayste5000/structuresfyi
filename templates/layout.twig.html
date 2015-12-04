@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	{% if active == 'home' %}
 	<!-- <meta name="google-site-verification" content="WUqQQbur7lN229f3ziXFLR5iQi4qaZPsIyU4YwS36kw" /> -->
 	{% endif %}
@@ -24,20 +25,12 @@
 	<link rel="stylesheet" type="text/css" href="{{ base }}/public/css/style.css">
 	<link rel="stylesheet" href="{{ base }}/public/css/font-awesome/css/font-awesome.min.css">
 
-	<script type="text/javascript" src="{{ base }}/public/js/modernizr.custom.43332.js"></script>
+	<script type="text/javascript" src="{{ base }}/public/js/modernizr-custom.js"></script>
 
-	<script type="text/javascript">
-		Modernizr.load({
-			test: Modernizr.placeholder,
-			nope: "/public/js/placeholders.js"
-		});
-		Modernizr.load({
-			test: Modernizr.mq('only all'),
-			nope: "/public/js/respond.js"
-		});
-	</script>
 </head>
 <body>
+
+<div class="webgl-message">WebGL is not supported in your browser. This feature is essential to view presentations in structures.fyi. <a href="http://caniuse.com/#feat=webgl" target="_blank">Click here for a list of compatible browsers.</a></div>
 
 <div class="main">
 
