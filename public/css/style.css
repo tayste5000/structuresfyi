@@ -388,7 +388,8 @@ a {
           transform: translateZ(0);
   opacity: 1.0;
   -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s; }
+  transition: opacity 0.3s;
+  width: 100%; }
   #dialogue #menu {
     color: #37f;
     -webkit-transition: color 0.3s;

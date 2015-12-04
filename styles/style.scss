@@ -281,6 +281,7 @@ a{
 	transform: translateZ(0);
 	opacity: 1.0;
 	transition: opacity $animation-time;
+	width: 100%;
 
 	#menu{
 		color: #37f;
