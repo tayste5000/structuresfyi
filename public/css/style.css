@@ -411,7 +411,8 @@ a {
   position: relative;
   margin-left: -1em;
   margin-right: -1em;
-  margin-top: -5px; }
+  margin-top: -5px;
+  overflow: hidden; }
   @media (min-width: 768px) {
     .protein-view {
       margin-left: 0em;
@@ -450,19 +451,26 @@ a {
   margin: 5px;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
-  z-index: 500;
+  z-index: 600;
   -webkit-transform: translateZ(0);
           transform: translateZ(0); }
-  .collapse-btn > .expand-txt {
+  .collapse-btn .expand-txt {
     display: none; }
+  .collapse-btn > .regular {
+    display: none; }
+  @media (min-width: 768px) {
+    .collapse-btn > .mobile {
+      display: none; }
+    .collapse-btn > .regular {
+      display: inline; } }
 
 .collapse #dialogue {
   display: none; }
 
-.collapse .collapse-btn > .collapse-txt {
+.collapse .collapse-btn .collapse-txt {
   display: none; }
 
-.collapse .collapse-btn > .expand-txt {
+.collapse .collapse-btn .expand-txt {
   display: inline; }
 
 .transitioning #dialogue {

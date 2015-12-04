@@ -311,6 +311,7 @@ a{
 	margin-left:-1em;
 	margin-right:-1em;
 	margin-top:-5px;
+	overflow: hidden;
 	@include small{
 		margin-left:0em;
 		margin-right:0em;
@@ -357,10 +358,22 @@ a{
 	top:0;
 	margin:5px;
 	transition: opacity $animation-time;
-	z-index: 500;
+	z-index: 600;
 	transform: translateZ(0);
-	&>.expand-txt{
+	.expand-txt{
 		display: none;
+	}
+	&>.regular{
+		display: none;
+	}
+
+	@include small{
+		&>.mobile{
+			display: none;
+		}
+		&>.regular{
+			display: inline;
+		}
 	}
 }
 
@@ -369,10 +382,10 @@ a{
 		display: none;
 	}
 	.collapse-btn{
-		&>.collapse-txt{
+		.collapse-txt{
 			display: none;
 		}
-		&>.expand-txt{
+		.expand-txt{
 			display: inline;
 		}
 	}
