@@ -716,7 +716,7 @@ return {
     "tetra": function active(){
 
       dialogue.innerHTML = "<button id=\"menu\"><i class=\"fa fa-arrow-circle-left\"></i>&nbsp;To menu</button>" +
-      "<p>In the active form of pyruvate carboxylase, four chains come together to form a tetramer.</p>" +
+      "<p>This orientation is seen in the native structure of pyruvate carboxylase where four chains come together to form a tetramer.</p>" +
       "<button type=\"button\" id=\"prev\">Previous</button>";
 
       viewer.setZoom(250,300);
