@@ -630,51 +630,38 @@ return {
       "<button type=\"button\" id=\"next\">Next</button>";
 
       viewer.setZoom(200,300);
-      viewer.centerOn(structures["pc"].select({chain: "A" }));
+      viewer.centerOn(structures["pc"].select({chain: "A" }), 300);
       viewer.setRotation([-0.2888628840446472, 0.8736864924430847, -0.3913517892360687, 0,
         -0.12120189517736435, 0.3721407353878021, 0.920219898223877, 0,
         0.9496287107467651, 0.31326746940612793, -0.0015848546754568815, 0,
         0, 0, 0, 1], 300);
       viewer.hide("*");
       selection = viewer.cartoon("pc",structures["pc"].select({chain: "A"}));
-      selection.setSelection(structures["pc"].select({chain: "A", rnumRange:[1,467]}));
+      selection.setSelection(structures["pc"].select({chain: "A", rnumRange:[1077,1152]}));
 
-      before = true;
+      var BCCPCenter = structures["pc"].select({chain: "A", rnumRange:[1077,1152]}).center();
+      var CTCenter = structures["pc"].select({chain: "A", rnumRange:[516,1001]}).center();
+      var BCCenter = structures["pc"].select({chain: "A", rnumRange:[1,467]}).center();
 
-      rxnCycle = window.setInterval(function(){
-        if (before){
-          viewer.hide("*");
-          selection = viewer.cartoon("pc",structures["pc"].select({chain: "A"}));
-          selection.setSelection(structures["pc"].select({chain: "A", rnumRange:[516,1001]}));
-        }
-
-        else{
-          viewer.hide("*");
-          selection = viewer.cartoon("pc",structures["pc"].select({chain: "A"}));
-          selection.setSelection(structures["pc"].select({chain: "A", rnumRange:[1,467]}));
-        }
-
-        before = !before;
-      },1000);
+      var lines = viewer.customMesh("lines");
+      lines.addTube(BCCPCenter,CTCenter, 0.3, {cap: true, color: "yellow"});
+      lines.addTube(BCCPCenter,BCCenter, 0.3, {cap: true, color: "yellow"});
 
       var next = document.querySelector("#next");
 
       next.addEventListener("click", function(){
-        window.clearInterval(rxnCycle);
         presentation.domain.di();
       });
 
       var prev = document.querySelector("#prev");
 
       prev.addEventListener("click", function(){
-        window.clearInterval(rxnCycle);
         presentation.domain.bccp();
       });
 
       var menu = document.querySelector("#menu");
 
       menu.addEventListener("click", function(){
-        window.clearInterval(rxnCycle);
         presentation.start();
       });
 
@@ -688,52 +675,39 @@ return {
       "<button type=\"button\" id=\"prev\">Previous</button>" +
       "<button type=\"button\" id=\"next\">Next</button>";
 
-      viewer.setZoom(250,300);
-      viewer.centerOn(structures["pc"].select({chains: ["A","C"] }), 300);
+      viewer.setZoom(200,300);
+      viewer.centerOn(structures["pc"].select({chains: ["A", "C"] }), 300);
       viewer.setRotation([-0.2888628840446472, 0.8736864924430847, -0.3913517892360687, 0,
         -0.12120189517736435, 0.3721407353878021, 0.920219898223877, 0,
         0.9496287107467651, 0.31326746940612793, -0.0015848546754568815, 0,
         0, 0, 0, 1], 300);
       viewer.hide("*");
-      selection = viewer.cartoon("pc",structures["pc"].select({chains: ["A","C"] }));
-      selection.setSelection(structures["pc"].select({chain: "A", rnumRange:[1,467]}));
+      selection = viewer.cartoon("pc",structures["pc"].select({chains: ["A", "C"]}));
+      selection.setSelection(structures["pc"].select({chain: "A", rnumRange:[1077,1152]}));
 
-      before = true;
+      var BCCPCenter = structures["pc"].select({chain: "A", rnumRange:[1077,1152]}).center();
+      var CTCenter = structures["pc"].select({chain: "C", rnumRange:[516,1001]}).center();
+      var BCCenter = structures["pc"].select({chain: "A", rnumRange:[1,467]}).center();
 
-      rxnCycle = window.setInterval(function(){
-        if (before){
-          viewer.hide("*");
-          selection = viewer.cartoon("pc",structures["pc"].select({chains: ["A","C"] }));
-          selection.setSelection(structures["pc"].select({chain: "C", rnumRange:[516,1001]}));
-        }
-
-        else{
-          viewer.hide("*");
-          selection = viewer.cartoon("pc",structures["pc"].select({chains: ["A","C"] }));
-          selection.setSelection(structures["pc"].select({chain: "A", rnumRange:[1,467]}));
-        }
-
-        before = !before;
-      },1000);
+      var lines = viewer.customMesh("lines");
+      lines.addTube(BCCPCenter,CTCenter, 0.3, {cap: true, color: "yellow"});
+      lines.addTube(BCCPCenter,BCCenter, 0.3, {cap: true, color: "yellow"});
 
       var next = document.querySelector("#next");
 
       next.addEventListener("click", function(){
-        window.clearInterval(rxnCycle);
         presentation.domain.tetra();
       });
 
       var prev = document.querySelector("#prev");
 
       prev.addEventListener("click", function(){
-        window.clearInterval(rxnCycle);
         presentation.domain.mono();
       });
 
       var menu = document.querySelector("#menu");
 
       menu.addEventListener("click", function(){
-        window.clearInterval(rxnCycle);
         presentation.start();
       });
 
@@ -747,7 +721,7 @@ return {
 
       viewer.setZoom(250,300);
 
-      viewer.centerOn( structures["pc"] );
+      viewer.centerOn( structures["pc"], 300 );
 
       viewer.setRotation([-0.88040691614151, -0.45164376497268677, 0.1439330130815506, 0,
         0.07239040732383728, 0.1718580722808838, 0.9824074506759644, 0,
