@@ -117,7 +117,7 @@ return {
 
       dialogue.innerHTML = "<button id=\"menu\"><i class=\"fa fa-arrow-circle-left\"></i>&nbsp;To menu</button>" +
       "<p>Pyruvate Carboxylase catalyzes the carboxylation of Pyruvate to form oxaloacetate.</p>" +
-      "<p style=\"text-align:center;\"><b><span class=\"rxn\" id=\"pyr-co2\" >Carbon Dioxide + Pyrvate</span>&nbsp;<i class=\"fa fa-arrow-right\"></i>&nbsp;<span class=\"rxn\" id=\"oxa\">Oxaloacetate</span></b></p>" +
+      "<p style=\"text-align:center;\"><b><span class=\"rxn\" id=\"pyr-co2\" >CO<sub>2</sub> + Pyruvate</span>&nbsp;<i class=\"fa fa-arrow-right\"></i>&nbsp;<span class=\"rxn\" id=\"oxa\">Oxaloacetate</span></b></p>" +
       "<button type=\"button\" id=\"next\">Next</button>"; 
 
       var pyr = document.querySelector("#pyr-co2");
@@ -182,8 +182,9 @@ return {
       dialogue.innerHTML = "<button id=\"menu\"><i class=\"fa fa-arrow-circle-left\"></i>&nbsp;To menu</button>" +
       "<p>Since most cellular carbon dioxide exists in the form of bicarbonate, Pyruvate carboxylase needs to " +
       "convert bicarbonate into carbon dioxide first, using the energy from an ATP molecule</p>" +
-      "<p style=\"text-align:center;\"><b><span class=\"rxn\" id=\"hco3\" >bicarbonate + ATP</span>&nbsp;<i class=\"fa fa-arrow-right\"></i>&nbsp;" +
-      "<span class=\"rxn\" id=\"cpo\">ADP + carboxyphosphate</span>&nbsp;<i class=\"fa fa-arrow-right\"></i>&nbsp;<span class=\"rxn\" id=\"co2\">ADP + phosphate + carbon dioxide</span></b></p>" +
+      "<p style=\"text-align:center;\"><b><span class=\"rxn\" id=\"hco3\" >HCO<sub>3</sub><sup>-</sup> + ATP</span>&nbsp;" +
+      "<i class=\"fa fa-arrow-right\"></i>&nbsp;<span class=\"rxn\" id=\"cpo\">ADP + CO<sub>2</sub>PO<sub>4</sub><sup>-</sup></span>&nbsp;" +
+      "<i class=\"fa fa-arrow-right\"></i>&nbsp;<span class=\"rxn\" id=\"co2\">ADP + PO<sub>4</sub><sup>-</sup> + CO<sub>2</sub></span></b></p>" +
       "<button type=\"button\" id=\"prev\">Previous</button>" +
       "<button type=\"button\" id=\"next\">Next</button>";
 
@@ -262,9 +263,9 @@ return {
 
     "biotin": function ligand(){
       dialogue.innerHTML = "<button id=\"menu\"><i class=\"fa fa-arrow-circle-left\"></i>&nbsp;To menu</button>" +
-      "<p>To keep the carbon dioxide molecule from converting back into bicarbonate " +
-      "before it reaches the site of the next reaction, it is attached to a biotin molecule</p>" +
-      "<p style=\"text-align:center;\"><b><span class=\"rxn\" id=\"bti\" >Carbon Dioxide + Biotin</span>&nbsp;<i class=\"fa fa-arrow-right\"></i>&nbsp;<span class=\"rxn\" id=\"cbi\">Carboxybiotin</span></b></p>" +
+      "<p>The carbon dioxide is then bound to a biotin molecule so it " +
+      "can be transported to the site of the next reaction.</p>" +
+      "<p style=\"text-align:center;\"><b><span class=\"rxn\" id=\"bti\" >CO<sub>2</sub> + biotin</span>&nbsp;<i class=\"fa fa-arrow-right\"></i>&nbsp;<span class=\"rxn\" id=\"cbi\">CO<sub>2</sub>-Biotin</span></b></p>" +
       "<button type=\"button\" id=\"prev\">Previous</button>" +
       "<button type=\"button\" id=\"next\">Next</button>";
 
@@ -331,7 +332,7 @@ return {
     },
     "halfRxn": function ligand(){
       dialogue.innerHTML = "<button id=\"menu\"><i class=\"fa fa-arrow-circle-left\"></i>&nbsp;To menu</button>" +
-      "<p>These reactions are performed all together in the <b>biotin carboxylase</b> domain of pyruvate carboxylase.</p>" +
+      "<p>These reactions occur in the <b>biotin carboxylase</b> domain of pyruvate carboxylase.</p>" +
       "<button type=\"button\" id=\"prev\">Previous</button>" +
       "<button type=\"button\" id=\"next\">Next</button>";
 
@@ -406,10 +407,9 @@ return {
     },
     "pyruvate": function ligand(){
       dialogue.innerHTML = "<button id=\"menu\"><i class=\"fa fa-arrow-circle-left\"></i>&nbsp;To menu</button>" +
-      "<p>Next, the carboxyl carrying biotin is transported to the <b>carboxyltransferase</b> " + 
-      "domain where it is used to carboxylate pyruvate in order to form oxaloacetate.</p>" +
-      "<p style=\"text-align:center;\"><b><span class=\"rxn\" id=\"cbt\" >carboxybiotin + pyruvate</span>&nbsp;<i class=\"fa fa-arrow-right\"></i>&nbsp;" +
-      "<span class=\"rxn\" id=\"bti\">biotin + CO2 + pyruvate</span>&nbsp;<i class=\"fa fa-arrow-right\"></i>&nbsp;<span class=\"rxn\" id=\"oxa\">biotin + oxaloacetate</span></b></p>" +
+      "<p>In the <b>carboxyltransferase</b> domain, carbon dioxide reacts with pyruvate to form oxaloacetate.</p>" +
+      "<p style=\"text-align:center;\"><b><span class=\"rxn\" id=\"cbt\" >CO<sub>2</sub>-biotin</span>&nbsp;<i class=\"fa fa-arrow-right\"></i>&nbsp;" +
+      "<span class=\"rxn\" id=\"bti\">biotin + CO<sub>2</sub> + pyruvate</span>&nbsp;<i class=\"fa fa-arrow-right\"></i>&nbsp;<span class=\"rxn\" id=\"oxa\">oxaloacetate</span></b></p>" +
       "<button type=\"button\" id=\"prev\">Previous</button>";
 
       var cbt = document.querySelector("#cbt");
