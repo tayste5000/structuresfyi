@@ -68,6 +68,17 @@ function car(){
 
 }
 
+function pc(){
+
+	global $twig;
+
+	echo $twig->render('structures/pc.twig.html', array(
+		'base' => getenv('BASE_URL'),
+		'active' => 'structures'
+	));
+
+}
+
 function about(){
 
 	global $twig;

@@ -16,6 +16,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/about/', 'about');
     $r->addRoute('GET', '/structures/', 'structures');
     $r->addRoute('GET', '/structures/car/', 'car');
+    $r->addRoute('GET', '/structures/pc/', 'pc');
     $r->addRoute('GET', '/site-map/', 'map');
     $r->addRoute('GET', '/403/', 'ForbiddenHandler');
 });

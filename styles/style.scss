@@ -397,3 +397,14 @@ a{
 		opacity: 0.0;
 	}
 }
+
+.rxn{
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-color: transparent;
+	transition: border-color $animation-time;
+}
+
+.underline{
+	border-color: #333;
+}

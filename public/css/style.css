@@ -476,3 +476,13 @@ a {
 
 .transitioning #dialogue {
   opacity: 0.0; }
+
+.rxn {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-color: transparent;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s; }
+
+.underline {
+  border-color: #333; }
