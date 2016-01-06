@@ -74,7 +74,7 @@ return {
     "<button type=\"button\" id=\"about\">About PC</button>"; 
 
 
-    viewer.setZoom(200,300);
+    viewer.setZoom(250,300);
     viewer.hide("*");
     viewer.centerOn( structures["pc"] );
     viewer.setRotation([0.8740044236183167, 0.4792707562446594, -0.0800875723361969, 0,
@@ -126,7 +126,7 @@ return {
       pyr.classList.add("underline");
 
 
-      viewer.setZoom(25,300);
+      viewer.setZoom(40,300);
       viewer.centerOn(structures["rxn"].select({rnames: ["PYR", "CO2"]}), 300);
       viewer.setRotation([-0.7982008457183838, -0.3651939332485199, 0.4790574610233307, 0,
         -0.5309801697731018, 0.8021028637886047, -0.27324211597442627, 0,
@@ -194,7 +194,7 @@ return {
       hco3.classList.add("underline");
 
       viewer.hide("*")
-      viewer.setZoom(25,300);
+      viewer.setZoom(40,300);
       viewer.setRotation([0.6748999953269958, 0.6065853238105774, -0.420185387134552, 0,
         0.7127294540405273, -0.38838252425193787, 0.5840882658958435, 0,
         0.1911076456308365, -0.6936811804771423, -0.6944498419761658, 0,
@@ -273,7 +273,7 @@ return {
 
       bti.classList.add("underline");
 
-      viewer.setZoom(25,300);
+      viewer.setZoom(40,300);
       viewer.setRotation([0.4917562007904053, -0.4994637370109558, 0.7132325768470764, 0,
         -0.5406818389892578, 0.46688956022262573, 0.6997494101524353, 0,
         -0.6825063228607178, -0.7297395467758179, -0.04045388475060463, 0,
@@ -335,7 +335,7 @@ return {
       "<button type=\"button\" id=\"prev\">Previous</button>" +
       "<button type=\"button\" id=\"next\">Next</button>";
 
-      viewer.setZoom(25,300);
+      viewer.setZoom(40,300);
       viewer.setRotation([-0.8920552730560303, 0.3818952739238739, -0.24162141978740692, 0,
         -0.17818959057331085, 0.19411112368106842, 0.96464604139328, 0,
         0.4152979254722595, 0.9035773277282715, -0.1051052063703537, 0,
@@ -418,7 +418,7 @@ return {
 
       cbt.classList.add("underline");
 
-      viewer.setZoom(25,300);
+      viewer.setZoom(40,300);
       viewer.centerOn(structures["rxn2"].select({rnames: ["BTI", "CO2"]}));
       viewer.setRotation([0.17471960186958313, 0.8800305128097534, 0.44157958030700684, 0,
         0.6810445189476013, 0.21587009727954865, -0.6996638178825378, 0,
@@ -484,7 +484,7 @@ return {
       "<p>A single chain of pyruvate carboxylase contains over 1000 amino acids</p>" +
       "<button type=\"button\" id=\"next\">Next</button>"; 
 
-      viewer.setZoom(150,300);
+      viewer.setZoom(200,300);
       viewer.centerOn(structures["pc"].select({chain: "A" }), 300);
       viewer.setRotation([-0.2888628840446472, 0.8736864924430847, -0.3913517892360687, 0,
         -0.12120189517736435, 0.3721407353878021, 0.920219898223877, 0,
@@ -515,7 +515,7 @@ return {
       "<button type=\"button\" id=\"prev\">Previous</button>" +
       "<button type=\"button\" id=\"next\">Next</button>";
 
-      viewer.setZoom(150,300);
+      viewer.setZoom(200,300);
       viewer.centerOn(structures["pc"].select({chain: "A" }), 300);
       viewer.setRotation([-0.2888628840446472, 0.8736864924430847, -0.3913517892360687, 0,
         -0.12120189517736435, 0.3721407353878021, 0.920219898223877, 0,
@@ -552,7 +552,7 @@ return {
       "<button type=\"button\" id=\"prev\">Previous</button>" +
       "<button type=\"button\" id=\"next\">Next</button>";
 
-      viewer.setZoom(150,300);
+      viewer.setZoom(200,300);
       viewer.centerOn(structures["pc"].select({chain: "A" }), 300);
       viewer.setRotation([-0.2888628840446472, 0.8736864924430847, -0.3913517892360687, 0,
         -0.12120189517736435, 0.3721407353878021, 0.920219898223877, 0,
@@ -590,7 +590,7 @@ return {
       "<button type=\"button\" id=\"prev\">Previous</button>" +
       "<button type=\"button\" id=\"next\">Next</button>";
 
-      viewer.setZoom(150,300);
+      viewer.setZoom(200,300);
       viewer.centerOn(structures["pc"].select({chain: "A" }), 300);
       viewer.setRotation([-0.2888628840446472, 0.8736864924430847, -0.3913517892360687, 0,
         -0.12120189517736435, 0.3721407353878021, 0.920219898223877, 0,
@@ -629,7 +629,7 @@ return {
       "<button type=\"button\" id=\"prev\">Previous</button>" +
       "<button type=\"button\" id=\"next\">Next</button>";
 
-      viewer.setZoom(150,300);
+      viewer.setZoom(200,300);
       viewer.centerOn(structures["pc"].select({chain: "A" }));
       viewer.setRotation([-0.2888628840446472, 0.8736864924430847, -0.3913517892360687, 0,
         -0.12120189517736435, 0.3721407353878021, 0.920219898223877, 0,
@@ -688,7 +688,7 @@ return {
       "<button type=\"button\" id=\"prev\">Previous</button>" +
       "<button type=\"button\" id=\"next\">Next</button>";
 
-      viewer.setZoom(200,300);
+      viewer.setZoom(250,300);
       viewer.centerOn(structures["pc"].select({chains: ["A","C"] }), 300);
       viewer.setRotation([-0.2888628840446472, 0.8736864924430847, -0.3913517892360687, 0,
         -0.12120189517736435, 0.3721407353878021, 0.920219898223877, 0,
@@ -745,7 +745,7 @@ return {
       "<p>In the active form of pyruvate carboxylase, four chains come together to form a tetramer.</p>" +
       "<button type=\"button\" id=\"prev\">Previous</button>";
 
-      viewer.setZoom(200,300);
+      viewer.setZoom(250,300);
 
       viewer.centerOn( structures["pc"] );
 
