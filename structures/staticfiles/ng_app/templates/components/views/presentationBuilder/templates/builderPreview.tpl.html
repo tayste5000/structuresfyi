@@ -1,0 +1,14 @@
+<h2>Preview Presentation</h2>
+<button ng-if='!$ctrl.started' class='btn btn-default' ng-click='$ctrl.start()'>Start presentation</button>
+<p ng-if='$ctrl.started'>{{$ctrl.activeState.message}}</p>
+<div ng-if='$ctrl.started'>
+	<button ng-if='!$ctrl.isFirstState()'
+		ng-click='$ctrl.prev()'
+		class='btn btn-default'>Previous</button>
+	<button ng-if='!$ctrl.isLastState()'
+		ng-click='$ctrl.next()'
+		class='btn btn-default'>Next</button>
+	<button ng-if='$ctrl.isLastState()'
+		ng-click='$ctrl.restart()'
+		class='btn btn-default'>Restart</button>
+</div>

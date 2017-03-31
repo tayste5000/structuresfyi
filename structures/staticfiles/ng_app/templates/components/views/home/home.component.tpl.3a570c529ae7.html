@@ -1,0 +1,15 @@
+<div class='row'>
+	<div class='col-sm-12'>
+		<h1 class='text-center'>Presentation Gallery</h1>
+	</div>
+	<p ng-if='$ctrl.gallerItems.length == 0'>Loading...</p>
+	<div class='col-xs-12 col-sm-6'>
+		<div ng-repeat='item in $ctrl.galleryItems' class='panel panel-default'>
+			<div class='panel-heading'><a ui-sref='presentation({id: item.id})'>{{item.presentation.title}}</a></div>
+			<div class='panel-body'>
+				<p>{{item.presentation.description}}</p>
+				<p><b>Created By: </b>{{item.presentation.name}} ({{item.created_at | date: 'shortDate'}})</p>
+			</div>
+		</div>
+	</div>
+</div>

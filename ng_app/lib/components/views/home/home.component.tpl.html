@@ -1,0 +1,17 @@
+<div class='row'>
+	<div class='col-sm-12'>
+		<h1 class='text-center'>Presentation Gallery</h1>
+		<h4>Each item below links to a presentation that has been custom-made by a structures.fyi user. These presentations are meant to highlight the details of protein structures and explain how they are involved in a particular biological function. <a ui-sref='builderSearch'>Click here to make your own presentation.</a></h4>
+	</div>
+	<p ng-if='$ctrl.gallerItems.length == 0'>Loading...</p>
+	<div ng-repeat='item in $ctrl.galleryItems' class='col-xs-12 col-sm-6'>
+		<div class='panel panel-default'>
+			<div class='panel-heading'><a ui-sref='presentation({id: item.id})'>{{item.presentation.title}}</a></div>
+			<div class='panel-body'>
+				<p>{{item.presentation.description}}</p>
+				<p><b>Created By: </b>{{item.presentation.name}} ({{item.created_at | date: 'shortDate'}})</p>
+				<a ui-sref='presentation({id: item.id})' class='btn btn-info'>View</a>
+			</div>
+		</div>
+	</div>
+</div>

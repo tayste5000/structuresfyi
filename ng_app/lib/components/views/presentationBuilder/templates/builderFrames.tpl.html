@@ -1,0 +1,18 @@
+<h2>Edit Presentation Frames</h2>
+<div>
+	<button class='btn btn-default' ng-click='$ctrl.addFrame()'>Add frame</button>
+	<button class='btn btn-default' ng-click='$ctrl.saveState({activeState: $ctrl.activeState})'>Save Orientation</button>
+</div>
+<div>
+	<p>Frames Selector</p>
+	<ul class='pagination'>
+		<li ng-class='{"active": $ctrl.activeState == state}' ng-repeat='state in $ctrl.states track by $index'>
+			<a ng-click='$ctrl.activateState($index)' href='#'>{{$index + 1}}</a>
+		</li>
+	</ul>
+</div>
+<button class='btn btn-default' ng-disabled='$ctrl.states.length < 2' ng-click='$ctrl.deleteFrame()'>Delete frame</button>
+<div class="form-group">
+	<label for="">Frame Message</label>
+	<textarea class='form-control' ng-model='$ctrl.activeState.message'></textarea>
+</div>

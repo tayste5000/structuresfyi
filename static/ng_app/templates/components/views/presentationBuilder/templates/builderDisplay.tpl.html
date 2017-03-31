@@ -1,0 +1,22 @@
+<h2>Edit structure details</h2>
+<h3>Save orientation</h3>
+<div>
+	<button class='btn btn-default' ng-click='$ctrl.saveState({activeState: $ctrl.activeState})'>Save Orientation</button>
+</div>
+<!-- <h3>Hide/Display Segments</h3>
+<p>TBD</p>
+<h3>Highlight Fragments</h3>
+<p>TBD</p>
+<h3>Display Sidechains</h3> -->
+<p><b>Display Residues</b></p>
+<p>Chain:</p>
+<select ng-model='$ctrl.selectedChain'
+	ng-options='chain as chain.name for chain in $ctrl.activeState.residueSelector track by $index'>
+</select>
+<p>Residues:</p>
+<div class='res-display'>
+	<div class='res' ng-class='{"selected": $ctrl.isSelected(residue.num)}'
+	ng-repeat='residue in $ctrl.selectedChain.residues track by $index'
+	ng-click='$ctrl.handleSelection(residue.num)'
+	ng-if='residue.name != "HOH"'>{{$ctrl.convertToCode(residue.name)}}</div>
+</div>

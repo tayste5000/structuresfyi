@@ -1,0 +1,47 @@
+<div ng-if='$ctrl.presentation' class='panel panel-default'>
+	<div class='panel-heading clearfix'>
+		<h2 style='float:left'>{{$ctrl.presentation.presentation.title}}</h2>
+		<button style='float:right' ng-click='$ctrl.showInfo = !$ctrl.showInfo' class='btn btn-danger'>
+			<span ng-if='!$ctrl.showInfo'>Help</span>
+			<span ng-if='$ctrl.showInfo'>X</span>
+		</button>
+	</div>
+	<div ng-if='!$ctrl.showInfo' class='panel-body'>
+		<p ng-if='!$ctrl.started'>{{$ctrl.presentation.presentation.description}}</p>
+		<button
+			ng-if='!$ctrl.started'
+			ng-disabled='!$ctrl.viewerStructure'
+			class='btn btn-default'
+			ng-click='$ctrl.start()'>
+				<span ng-if='$ctrl.viewerStructure'>Start presentation</span>
+				<span ng-if='!$ctrl.viewerStructure'>Loading...</span>
+			</button>
+		<p ng-if='$ctrl.started'>{{$ctrl.activeState.message}}</p>
+		<div ng-if='$ctrl.started'>
+			<button ng-if='!$ctrl.isFirstState()'
+				ng-click='$ctrl.prev()'
+				class='btn btn-default'>Previous</button>
+			<button ng-if='!$ctrl.isLastState()'
+				ng-click='$ctrl.next()'
+				class='btn btn-default'>Next</button>
+			<button ng-if='$ctrl.isLastState()'
+				ng-click='$ctrl.restart()'
+				class='btn btn-default'>Restart</button>
+		</div>
+	</div>
+	<div class='panel-body' ng-if='$ctrl.showInfo'>
+		<p><b>How to navigate the presentation:</b></p>
+		<ul>
+			<li>Click start to start</li>
+			<li>You will then be walked through a series of steps highlighting different features of the protein structure. Click Next to go to the next feature and Previous to go to the previous feature. (If there is only one navigation option it means you are at either the first or last frame)</li>
+			<li>When you get to the end of the presentaion you will have the option to restart by clicking the Restart button</li></ul>
+		<p><b>How to explore the protein structure:</b></p>
+		<!-- Need to include OS specific options -->
+		<p><b>On OS X with a touch pad:</b></p>
+		<ul>
+			<li>Click and drag to rotate the protein in any direction</li>
+			<li>Click and drag while holding down the 'shift' key to reposition to protein (translation)</li>
+			<li>Slide two fingers up and down on the touch pad to zoom in or zoom out.</li></ul>
+	</div>
+</div>
+<pv-link-component ng-show='$ctrl.started' link-viewer='$ctrl.linkViewer(viewer)'></pv-link-component>

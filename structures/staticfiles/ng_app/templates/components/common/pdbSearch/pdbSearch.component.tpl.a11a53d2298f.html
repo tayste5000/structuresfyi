@@ -1,0 +1,23 @@
+<div>
+	<h2>Load PDB File</h2>
+	<p>Type in a PDB ID to find a PDB structure. Once the structure is found, a Load button will appear below. Click the Load button to load the PDB structure and initiate presentation editing. <a href='http://www.rcsb.org/pdb/home/home.do' target='_blank'>To find the PDB ID of a protein you are interested in, click here to go to RCSB.org</a></p>
+	<div class='input-group'>
+		<span class='input-group-btn'>
+			<button class='btn btn-default' ng-click='$ctrl.searchPdb($ctrl.pdbSearch)' type='button'>Search</button>
+		</span>
+		<input type='text' class='form-control' ng-model='$ctrl.pdbSearch'>
+	</div>
+	<p ng-if='$ctrl.searchingPdb'>Searching...</p>
+	<h5 ng-if='$ctrl.searchFound' style='color: #22cc66'>PDB found <span style='color: #1d1d1d'>({{ $ctrl.filterName($ctrl.loadedPdb) }})</span></h5>
+	<h5 ng-if='$ctrl.searchFailed' style='color: #cc6622'>PDB not found</h5>
+	<div>
+		<button class='btn btn-default' ng-if='$ctrl.searchFound' ng-click='$ctrl.loadPdbAndReset()'>Load {{$ctrl.pdbSearch}}</button>
+	</div>
+
+	<!-- Stuff for loading local files -->
+	<!-- <input ng-model='$ctrl.newPdb' ngf-select ng-change='$ctrl.changePdb($ctrl.newPdb)' type="file">
+	<button
+		class='btn btn-default'
+		ng-disabled='$ctrl.loadingFile || !$ctrl.loadedFile'
+		ng-click='$ctrl.loadFile($ctrl.loadedFile)'>Load File</button> -->
+</div>

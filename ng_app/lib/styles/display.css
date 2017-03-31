@@ -1,0 +1,9 @@
+.res-display > .res{
+	display:inline-block;
+	padding: 2px;
+	cursor: pointer;
+}
+
+.res-display > .res.selected, .res-display > .res:hover{
+	background: #ccc;
+}

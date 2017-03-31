@@ -1,0 +1,16 @@
+<div class='row'>
+	<div class='col-sm-12'>
+		<h1 class='text-center'>Presentation Builder</h1>
+	</div>
+	<div class='col-sm-3 col-md-2' ng-if='$ctrl.pdbLoaded'>
+		<ul class='nav nav-pills nav-stacked'>
+			<li ng-class='{"active": $ctrl.$state.current.name == item.state}' ng-repeat='item in $ctrl.menuItems'>
+				<a ui-sref='{{item.state}}'>{{item.text}}</a>
+			</li>
+		</ul>
+	</div>
+	<div class='col-sm-9 col-md-10' ng-switch='$ctrl.selectedView'>
+		<ui-view></ui-view>
+	</div>
+</div>
+<pv-link-component link-viewer='$ctrl.linkViewer(viewer)'></pv-link-component>

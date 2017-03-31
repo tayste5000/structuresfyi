@@ -1,0 +1,12 @@
+<h2>Publish Presentation</h2>
+<div class="form-group">
+	<label for="">Title</label>
+	<input type='text' class='form-control' ng-model='$ctrl.presentation.title'>
+</div>
+<div class="form-group">
+	<label for="">Description</label>
+	<textarea class='form-control' ng-model='$ctrl.presentation.description'></textarea>
+</div>
+<div>
+	<button class='btn btn-success' ng-click='$ctrl.publishPresentation($ctrl.presentation)'>Submit</button>
+</div>
