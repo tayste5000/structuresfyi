@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(PROJECT_ROOT)
 SECRET_KEY = '%5wtea++p6iy2&=z6#=k$frut+at3d80@gihzae90b&a=^al#9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False if os.environ.get('DEBUG') else True
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'structures-fyi.herokuapp.com',
