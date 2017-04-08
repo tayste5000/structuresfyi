@@ -136,7 +136,7 @@ function(t,e,n){"use strict";var r=n(/*! angular */1),i=n(/*! ./navbar.component
 function(t,e,n){"use strict";var r=n(/*! ./navbar.controller.ts */30),i=function(){function t(){this.bindings={navbarItems:"<",label:"<"},this.controller=r["default"],this.templateUrl=n(/*! ./navbar.component.tpl.html */10)}return t}();Object.defineProperty(e,"__esModule",{value:!0}),e["default"]=i},/*!***********************************************************!*\
   !*** ./lib/components/common/navbar/navbar.controller.ts ***!
   \***********************************************************/
-function(t,e){"use strict";var n=function(){function t(){}return t}();Object.defineProperty(e,"__esModule",{value:!0}),e["default"]=n},/*!**************************************************!*\
+function(t,e){"use strict";var n=function(){function t(){this.collapsed=!0}return t}();Object.defineProperty(e,"__esModule",{value:!0}),e["default"]=n},/*!**************************************************!*\
   !*** ./lib/components/common/pdbSearch/index.ts ***!
   \**************************************************/
 function(t,e,n){"use strict";var r=n(/*! ./pdbSearch.config.ts */33),i=n(/*! ./pdbSearch.component.ts */32),o=n(/*! ./pdbSearch.run.ts */35);Object.defineProperty(e,"__esModule",{value:!0}),e["default"]=angular.module("structures_site.componants.views.pdbSearch",[]).config(r["default"]).component("pdbSearchComponent",new i["default"]).run(o["default"]).name},/*!****************************************************************!*\

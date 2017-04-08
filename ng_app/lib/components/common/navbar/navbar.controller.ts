@@ -5,7 +5,11 @@ import { navbarItem } from '../../../utils/interfaces.ts';
 
 class navbarCtrl implements ng.IComponentController{
 	public navbarItems : Array<navbarItem>;
-	constructor(){}
+	public collapsed : boolean;
+
+	constructor(){
+		this.collapsed = true;
+	}
 }
 
 export default navbarCtrl;
