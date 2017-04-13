@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'structures-fyi.herokuapp.com',
-    'structures.fyi',
+    'www.structures.fyi',
     'localhost',
     '127.0.0.1'
 ]
