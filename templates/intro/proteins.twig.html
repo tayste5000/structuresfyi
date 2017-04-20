@@ -1,0 +1,59 @@
+{% extends 'layout.twig.html' %}
+
+{% block title %}{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block main %}
+
+<div class="protein-view">
+	
+	<button class="collapse-btn">
+		<span class="regular">
+			<span class="expand-txt"><i class="fa fa-expand"></i>&nbsp;Expand</span>
+			<span class="collapse-txt"><i class="fa fa-compress"></i>&nbsp;Collapse</span>
+		</span>
+		<span class="mobile">
+			<span class="expand-txt"><i class="fa fa-expand"></i></span>
+			<span class="collapse-txt"><i class="fa fa-compress"></i></span>
+		</span>
+	</button>
+
+	<div id="dialogue">
+	  <h2>Explore molecular life.</h2>
+	  <p>Life as we know it is the consequence of millions of molecules interacting with each other.
+	    Follow along with this presentation to see how these interactions work.
+	  </p>
+	  <i class="fa fa-circle-o-notch fa-spin" id="spinner"></i>
+	</div>
+	
+	<div id="viewer" style="height:500px;"></div>
+
+</div>
+
+<script src="/public/js/bio-pv.min.js" ></script>
+<script src="/public/js/structures.js" ></script>
+<script>
+
+	var collapseBtn = document.querySelector(".collapse-btn");
+	var proteinView = document.querySelector(".protein-view");
+
+	collapseBtn.addEventListener("click", function(){
+
+		proteinView.classList.add("transitioning")
+
+		window.setTimeout(function(){
+
+			proteinView.classList.toggle("collapse");
+			
+			window.setTimeout(function(){
+				proteinView.classList.remove("transitioning");
+			},1)
+
+		},300);
+
+	});
+
+</script>
+
+{% endblock %}

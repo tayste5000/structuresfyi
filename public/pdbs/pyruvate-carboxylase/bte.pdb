@@ -1,0 +1,78 @@
+HETATM    1  N01 BTE    10     120.960 111.505  55.562  0.00  0.00           N  
+HETATM    2  S01 BTE    10     123.669 112.370  56.355  0.00  0.00           S  
+HETATM    3  C02 BTE    10     120.680 112.938  55.426  0.00  0.00           C  
+HETATM    4  N02 BTE    10     121.130 113.800  56.626  0.00  0.00           N  
+HETATM    5  C03 BTE    10     121.796 112.794  57.629  0.00  0.00           C  
+HETATM    6  O03 BTE    10     120.204 113.431  54.518  0.00  0.00           O  
+HETATM    7  C04 BTE    10     121.665 111.295  56.918  0.00  0.00           C  
+HETATM    8  O04 BTE    10     126.474 111.785  62.229  0.00  0.00           O1-
+HETATM    9  C05 BTE    10     122.961 113.185  57.759  0.00  0.00           C  
+HETATM   10  C06 BTE    10     122.852 110.831  56.557  0.00  0.00           C  
+HETATM   11  C07 BTE    10     123.374 109.746  57.499  0.00  0.00           C  
+HETATM   12  C08 BTE    10     123.571 110.237  58.945  0.00  0.00           C  
+HETATM   13  C09 BTE    10     125.049 110.073  59.346  0.00  0.00           C  
+HETATM   14  C10 BTE    10     125.344 110.943  60.582  0.00  0.00           C  
+HETATM   15  C11 BTE    10     126.461 111.037  61.133  0.00  0.00           C  
+HETATM   16  O12 BTE    10     127.409 110.352  60.834  0.00  0.00           O  
+HETATM   17  H01 BTE    10     120.880 114.635  56.710  0.00  0.00           H  
+HETATM   18  H02 BTE    10     123.347 113.314  58.589  0.00  0.00           H  
+HETATM   19  H03 BTE    10     121.049 110.555  57.329  0.00  0.00           H  
+HETATM   20  H04 BTE    10     122.808 110.261  55.630  0.00  0.00           H  
+HETATM   21  H07 BTE    10     121.167 113.096  58.581  0.00  0.00           H  
+HETATM   22  H09 BTE    10     122.832 114.122  57.557  0.00  0.00           H  
+HETATM   23  H10 BTE    10     124.266 109.319  57.149  0.00  0.00           H  
+HETATM   24  H13 BTE    10     122.607 109.028  57.475  0.00  0.00           H  
+HETATM   25  H15 BTE    10     125.664 110.378  58.551  0.00  0.00           H  
+HETATM   26  H17 BTE    10     122.967 109.672  59.593  0.00  0.00           H  
+HETATM   27  H18 BTE    10     123.300 111.249  59.010  0.00  0.00           H  
+HETATM   28  H19 BTE    10     125.242 109.067  59.572  0.00  0.00           H  
+HETATM   29  H21 BTE    10     124.798 110.581  61.404  0.00  0.00           H  
+HETATM   30  H22 BTE    10     125.062 111.937  60.387  0.00  0.00           H  
+CONECT    1    3    7
+CONECT    2    9   10
+CONECT    3    1    4
+CONECT    3    6
+CONECT    3    6
+CONECT    4    3    5   17
+CONECT    5    4    7    9   21
+CONECT    6    3
+CONECT    6    3
+CONECT    7    1    5   10   19
+CONECT    8   15
+CONECT    8   15
+CONECT    8   15
+CONECT    8   15
+CONECT    9    2    5   18   22
+CONECT   10    2    7   11   20
+CONECT   11   10   12   23   24
+CONECT   12   11   13   26   27
+CONECT   13   12   14   25   28
+CONECT   14   13   15   29   30
+CONECT   15    8
+CONECT   15    8
+CONECT   15    8
+CONECT   15    8
+CONECT   15   14
+CONECT   15   16
+CONECT   15   16
+CONECT   15   16
+CONECT   15   16
+CONECT   16   15
+CONECT   16   15
+CONECT   16   15
+CONECT   16   15
+CONECT   17    4
+CONECT   18    9
+CONECT   19    7
+CONECT   20   10
+CONECT   21    5
+CONECT   22    9
+CONECT   23   11
+CONECT   24   11
+CONECT   25   13
+CONECT   26   12
+CONECT   27   12
+CONECT   28   13
+CONECT   29   14
+CONECT   30   14
+END
